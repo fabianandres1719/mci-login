@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción - Noche de Parejas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: url("parejas.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 29, 60, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 1;
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(25px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      padding: 40px 30px;
+      max-width: 420px;
+      width: 90%;
+      color: #fff;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      animation: fadeUp 1.1s ease-out forwards;
+    }
+
+    .container img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 1.7rem;
+      margin: 10px 0;
+      letter-spacing: 0.5px;
+    }
+
+    p.event-info {
+      color: #d9e6ff;
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+      white-space: pre-line;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      text-align: left;
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #0173ea;
+      background: rgba(255, 255, 255, 0.95);
+      font-size: 1rem;
+      outline: none;
+      color: #000;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #051d3c;
+      box-shadow: 0 0 6px rgba(1, 115, 234, 0.6);
+    }
+
+    button {
+      background-color: #0173ea;
+      color: #ffffff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #051d3c;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(1, 115, 234, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 22px;
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      p.event-info {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <img src="mcilogo.png" alt="Logo MCI Madrid">
+    <h1>INSCRIPCIÓN NOCHE DE PAREJAS</h1>
+    <p class="event-info">📅 Fecha: Jueves 6 de Noviembre
+        🕗 Hora: 20 Hrs</p>
+
+    <form action="https://personal-n8n.yaf3an.easypanel.host/webhook/c7a61c2a-4ed8-462b-a365-c06cc00c8be7" method="POST">
+      <div>
+        <label for="movil_hombre">Tu Número Móvil *</label>
+        <input type="number" id="movil_hombre" name="movil_hombre" placeholder="Escribe tu número móvil (sin espacios, ni signos)" required>
+      </div>
+      <div>
+        <label for="movil_mujer">Móvil de tu Pareja *</label>
+        <input type="number" id="movil_mujer" name="movil_mujer" placeholder="Escribe el móvil de tu pareja (sin espacios, ni signos)" required>
+      </div>
+      <button type="submit">INSCRIBIRSE</button>
+    </form>
+  </div>
+</body>
+</html>
